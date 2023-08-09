@@ -55,8 +55,8 @@ nav .logo{
   /* border: 1px solid #000; */
   display: flex;
   margin-top: 10px;
-  margin-left: 50px;
-  flex: 5;
+  padding-left: 100px;
+  flex: 3;
   text-align: center;
 }
 .gnb li { margin: 0 10px; }
@@ -99,10 +99,10 @@ nav .logo{
 .gnb2 {
   /* border: 1px solid #000; */
   display: flex;
-  right: 0;
-  flex: 2;
+  flex: 1.5;
   height: inherit;
   line-height: 80px;
+  padding-left: 20px;
 }
 .gnb2 li { margin: 0 7px; }
 .gnb2 li a {
@@ -172,11 +172,11 @@ section h3 {
 #movie{
   width: 100%;
   height: 600px;
-  background-color:rgb(80, 26, 26);
+  background-color:rgba(80, 26, 26);
   /* background-image: linear-gradient(45deg, #9b2d2d 0%, #6e322d 100%); */
   padding-top: 50px;
   padding-bottom: 50px;
-  color: #fff;
+  color: #ccc;
 }
 
 .movie_img {
@@ -411,7 +411,7 @@ section h3 {
 .content{
   position: absolute;
   bottom: -350px;
-  background-color: rgba(189, 36, 36, 0.7);
+  background-color: rgba(59, 17, 17, 0.7);
   color: #fff;
   width: 100%;
   height: 100px;
@@ -421,18 +421,6 @@ section h3 {
   transition: 0.2s;
 }
 
-/* .content:before{
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: -15px;
-  background-color: crimson;
-  width: 100%;
-  height: 30px;
-  transform: rotate(-2deg) scale(1.3);
-  transform-origin: left bottom;
-} */
-
 .gallery li:hover .content{
   bottom: 0;
   transition-delay: 0.5s; /* 지연시간 */
@@ -441,45 +429,15 @@ section h3 {
 .sns a{color: white;}
 
 
-/* /////////// 극장 */
-
-/* #theater{
-  width: 100%;
-  height: 600px;
-  background-color: lightsalmon;
-  padding-top: 70px;
-}
-
-.theater_img {
-  width: 1200px;
-  margin: 80px auto 0;
-  overflow: hidden;
-}
-.theater_img ul {
-  display: flex;
-  justify-content: space-between;
-}
-.theater_img ul li {
-  width: 280px;
-  height: 280px;
-  border: 1px solid #ccc;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-} */
-
-
 
 /* /////////// 스토어 */
 
 #store{
   width: 100%;
   height: 700px;
-  background-color:rgb(73, 56, 49);
+  background-color:rgb(243, 243, 234);
   padding-top: 50px;
-  color: #ddd;
+  color: #333;
 }
 
 .store_img{
@@ -498,7 +456,7 @@ section h3 {
 
 .store_img .title h4{
   font-weight: bold;
-  color: #f4fff6;
+  color: #333
 }
 
 /* 스토어 오버시----------------------------------- */
@@ -822,15 +780,18 @@ section h3 {
 
 #event{
   height: 700px;
-  background-color: aliceblue;
+  background-color: rgb(230, 239, 248);
   padding-top: 50px;
+  color: #333;
   
 }
+
 .event_img{
   width: 1200px;
   height: 500px;
   margin: 50px auto 0;
 }
+
 .event_img ul{
   width: inherit;
   display: flex;
@@ -839,29 +800,59 @@ section h3 {
 
 .event_img ul li{
   margin: 10px;
+  transition: 0.5s
 }
 
-.btitle{
+/* 이벤트 호버 */
+.event_img ul li:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 3px 3px 15px #000;
+}
+
+.event_title{
   /* border: 1px solid red; */
   width: 100%;
   margin: auto;
+  background-color: #eefbff;
+  padding:15px 0;
 }
 
-.btitle h5{
-  color: darkred;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: -1px;
-  margin: 15px 0;
-}
-
-.btitle p{text-align: left;}
-.btitle a{
-  display: block;
-  margin-top: 50px;
-  text-align: left;
-  text-decoration: underline;
+.event_title h5{
   color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  padding-bottom: 10px;
+  transition: 0.7s;
+}
+
+.event_title p{
+  text-align: center;
+  transition: 0.2s;
+}
+.event_title a{
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: underline;
+  color: #777;
+  transition: 0.2s;
+}
+
+/* 이벤트 호버 (글씨) */
+.event_img ul li:hover h5{
+  color: darkred;
+  text-decoration: dotted;
+}
+
+.event_img ul li:hover p{
+  transform: scale(1.05);
+}
+
+.event_img ul li:hover a{
+  color: #333;
+  font-weight: bold;
 }
 
 /* 보너스(혜택)------------------------------------------- */
@@ -871,7 +862,8 @@ section h3 {
   justify-content: center;
   align-items: center;
   padding-top: 50px;
-  background-color: #f4fff6;
+  background-color: #e6f7f5;
+  color: #333;
 }
 
 .bonus_img{
