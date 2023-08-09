@@ -1,0 +1,998 @@
+@import url(common.css);
+/* @import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+.top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+.top a {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url('../image/top.png') no-repeat; 
+  transition: 0.35s;
+}
+.top a:hover {
+  background: url('../image/top_on.png') no-repeat;
+}
+
+/* Header_____________________________________________ */
+header{
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  border-bottom: 5px solid red;
+}
+nav {
+  width: 1200px;
+  height: inherit;
+  margin: auto;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+nav .logo{
+  flex: 1;
+  height: 80px;
+  text-align: center;
+  padding-top: 10px;
+  /* border: 1px solid #000; */
+}
+/* -----------------탑메뉴 */
+.gnb {
+  /* border: 1px solid #000; */
+  display: flex;
+  margin-top: 10px;
+  margin-left: 50px;
+  flex: 5;
+  text-align: center;
+}
+.gnb li { margin: 0 10px; }
+.gnb li a{
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+}
+
+.gnb li a:before,
+.gnb li a:after{
+  content: attr(data-link);
+  position: absolute;
+  width: 100%;
+  transition: 0.35s;
+}
+
+.gnb li a::before{
+  top:0;
+  left: 0;
+}
+
+.gnb li a::after{
+  top:100%;
+  left: 0;
+  color: darkred;
+}
+
+.gnb li a:hover::before{top:-100%;}
+.gnb li a:hover::after{top:0%;}
+
+/* -----------------탑메뉴끝 */
+
+.gnb2 {
+  /* border: 1px solid #000; */
+  display: flex;
+  right: 0;
+  flex: 2;
+  height: inherit;
+  line-height: 80px;
+}
+.gnb2 li { margin: 0 7px; }
+.gnb2 li a {
+  color: #777;
+  font-size: 15px;
+  font-weight: bold;
+}
+.gnb2 li a:hover { 
+  color: #000; 
+  text-decoration: underline;
+}
+
+/* Main_____________________________________________ */
+main {
+  width: 100%;
+  height: 800px;
+  /* background: url('../image/cgv_main.jpg') no-repeat center top;
+  background-size: cover; */
+}
+
+main video{
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+}
+
+.caption1 {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.caption1 h1 {
+  font-family: 'Centry Gothic', arial;
+  color: #ddd;
+  font-size: 70px;
+  font-weight: 100;
+}
+.caption1 strong {
+  color: #ddd;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: -1px;
+}
+
+/* Section_____________________________________________ */
+section {
+  width: 100%;
+  text-align: center;
+}
+section h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+section h3 {
+  font-weight: 400;
+  font-size: 18px;
+  margin: 10px 0;
+  color: #777;
+}
+
+
+/* /////////// 영화 */
+#movie{
+  width: 100%;
+  height: 600px;
+  background-color:rgb(80, 26, 26);
+  /* background-image: linear-gradient(45deg, #9b2d2d 0%, #6e322d 100%); */
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #fff;
+}
+
+.movie_img {
+  width: 1200px;
+  margin: 30px auto;
+  position: relative;
+  border: 0px;
+}
+
+
+/* 영화 이미지 테두리선 삭제 */
+.movie_img ul .movie_img1{
+  border-style: hidden;
+  border: 0px;
+  border-width: 0px;
+  display: inline-block;
+  content: "";
+}
+
+.movie_img ul .movie_img2{
+  border-style: hidden;
+  border: 0px;
+  border-width: 0px;
+  display: inline-block;
+  content: "";
+}
+
+.movie_img ul .movie_img3{
+  border-style: hidden;
+  border: 0px;
+  border-width: 0px;
+  display: inline-block;
+  content: "";
+}
+
+.movie_img ul .movie_img4{
+  border-style: hidden;
+  border: 0px;
+  border-width: 0px;
+  display: inline-block;
+  content: "";
+}
+
+
+
+
+/* 호버시 영화 줄거리 시작 @@@@@*/
+
+/* 첫번째 영화 */
+.movie_img1{
+  position: relative;
+}
+.movie_caption1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  background-color: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 70px 20px 0px 20px;
+  box-sizing: border-box;
+  line-height: 24px;
+  opacity: 0;
+  transition: 1.5s;
+}
+.movie_caption1 a{
+  background-color: rgb(255, 45, 45);
+  margin-top: 100px;
+  padding: 7px;
+  color: white;
+}
+.movie_img1:hover .movie_caption1{opacity: 1;}
+
+/* 두번째 영화 */
+.movie_img2{
+  position: relative;
+}
+.movie_caption2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  background-color: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 70px 20px 0px 20px;
+  box-sizing: border-box;
+  line-height: 24px;
+  opacity: 0;
+  transition: 1.5s;
+}
+.movie_caption2 a{
+  background-color: rgb(255, 45, 45);
+  margin-top: 100px;
+  padding: 7px;
+  color: white;
+}
+.movie_img2:hover .movie_caption2{opacity: 1;}
+
+
+/* 세번째 영화 */
+.movie_img3{
+  position: relative;
+}
+.movie_caption3{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  background-color: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 70px 20px 0px 20px;
+  box-sizing: border-box;
+  line-height: 24px;
+  opacity: 0;
+  transition: 1.5s;
+}
+.movie_caption3 a{
+  background-color: rgb(255, 45, 45);
+  margin-top: 100px;
+  padding: 7px;
+  color: white;
+}
+.movie_img3:hover .movie_caption3{opacity: 1;}
+
+/* 네번째 영화 */
+.movie_img4{
+  position: relative;
+}
+.movie_caption4{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  background-color: rgba(0,0,0,0.7);
+  color: #fff;
+  padding: 70px 20px 0px 20px;
+  box-sizing: border-box;
+  line-height: 24px;
+  opacity: 0;
+  transition: 1.5s;
+}
+.movie_caption4 a{
+  background-color: rgb(255, 45, 45);
+  margin-top: 100px;
+  padding: 7px;
+  color: white;
+}
+.movie_img4:hover .movie_caption4{opacity: 1;}
+
+
+/* -------------호버시 영화 줄거리 끝 @@@@@@ */
+
+
+.movie_img ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.movie_img ul li {
+  width: 280px;
+  height: 450px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.movie_img ul li img{
+  width: inherit;
+  height: inherit;
+}
+
+.movie_img ul li:hover{
+  transform: scale(1.1);
+  box-shadow: 5px 5px 15px #000;
+}
+
+
+
+
+/* ---------------------극장--------------------------- */
+
+#theater{
+  width: 100%;
+  height: 600px;
+  background-color: rgb(29, 24, 24);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #ccc;
+}
+
+.theater_img{
+  width: 1200px;
+  margin: 0px auto;
+}
+
+.gallery{
+  position: absolute;
+  width: 1200px;
+  height: 500px;
+  margin: auto;
+  display: flex;
+}
+
+.gallery li{
+  border-right: 0px solid #000;
+  flex: 1; /* 1:1:1:1 */
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.gallery li:last-child{border-right: none;}
+
+.gallery li:nth-child(1){background: url(../image/theater_1.jpg) no-repeat center center;}
+.gallery li:nth-child(2){background: url(../image/theater_2.jpg) no-repeat center center;}
+.gallery li:nth-child(3){background: url(../image/theater_3.jpg) no-repeat center center;}
+.gallery li:nth-child(4){background: url(../image/theater_4.jpg) no-repeat center center;}
+
+.gallery li:hover{
+  flex: 3;
+  filter: grayscale(0);
+}
+
+.content{
+  position: absolute;
+  bottom: -350px;
+  background-color: rgba(189, 36, 36, 0.7);
+  color: #fff;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  padding-top: 10px;
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+
+/* .content:before{
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -15px;
+  background-color: crimson;
+  width: 100%;
+  height: 30px;
+  transform: rotate(-2deg) scale(1.3);
+  transform-origin: left bottom;
+} */
+
+.gallery li:hover .content{
+  bottom: 0;
+  transition-delay: 0.5s; /* 지연시간 */
+}
+
+.sns a{color: white;}
+
+
+/* /////////// 극장 */
+
+/* #theater{
+  width: 100%;
+  height: 600px;
+  background-color: lightsalmon;
+  padding-top: 70px;
+}
+
+.theater_img {
+  width: 1200px;
+  margin: 80px auto 0;
+  overflow: hidden;
+}
+.theater_img ul {
+  display: flex;
+  justify-content: space-between;
+}
+.theater_img ul li {
+  width: 280px;
+  height: 280px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+} */
+
+
+
+/* /////////// 스토어 */
+
+#store{
+  width: 100%;
+  height: 700px;
+  background-color:rgb(73, 56, 49);
+  padding-top: 50px;
+  color: #ddd;
+}
+
+.store_img{
+  width: 1200px;
+}
+
+.store_img ul li{ /* 박스간격 */
+  margin: 5px;
+}
+
+.store_img img{
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.store_img .title h4{
+  font-weight: bold;
+  color: #f4fff6;
+}
+
+/* 스토어 오버시----------------------------------- */
+
+/* 첫번째 스토어 오버시 효과들 */
+
+.store_img1{
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.store_img1:before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+}
+.store_img1:hover.store_img1:before {opacity: 1;}
+
+.store_img1 i:nth-child(2){ /* 장바구니 */
+  position: absolute;
+  top: 50%;
+  left: 27%;
+  transform: translate(-50%, -50%) scale(0.3);
+  font-size: 50px;
+  color: #ffffff;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.store_img1 i:nth-child(3){ /* 선물박스 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.3);
+  font-size: 50px;
+  color: #ffffff;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.store_img1 i:nth-child(4){ /* 쿠폰모양 */
+  position: absolute;
+  top: 50%;
+  left: 73%;
+  transform: translate(-50%, -50%) scale(0.3);
+  font-size: 50px;
+  color: #ffffff;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.store_img1:hover i{
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.store_img1 i:hover{
+  transform: translate(-50%, -50%) scale(1.3);
+  color: #ff5040;
+}
+
+/* 첫번째 스토어 오버시 효과 끝 */
+
+/* 두번째 스토어 오버시 효과들 */
+
+.store_img2{
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.store_img2:before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+}
+.store_img2:hover.store_img2:before {opacity: 1;}
+
+.store_img2 i:nth-child(2){ /* 장바구니 */
+  position: absolute;
+  top: 50%;
+  left: 27%;
+  transform: translate(-50%, -50%) scale(0.3);
+  font-size: 50px;
+  color: #ffffff;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.store_img2 i:nth-child(3){ /* 선물박스 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.3);
+  font-size: 50px;
+  color: #fff;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.store_img2 i:nth-child(4){ /* 쿠폰모양 */
+  position: absolute;
+  top: 50%;
+  left: 73%;
+  transform: translate(-50%, -50%) scale(0.3);
+  font-size: 50px;
+  color: #ffffff;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.store_img2:hover i{
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.store_img2 i:hover{
+  transform: translate(-50%, -50%) scale(1.3);
+  color: #ff5040;
+}
+
+/* 두번째 스토어 오버시 효과 끝 */
+
+/* 세번째 스토어 오버시 효과들 */
+
+.store_img3{
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.store_img3:before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+}
+.store_img3:hover.store_img3:before {opacity: 1;}
+
+.store_img3 i:nth-child(2){ /* 장바구니 */
+  position: absolute;
+  top: 50%;
+  left: 27%;
+  transform: translate(-50%, -50%) scale(0.3);
+  font-size: 50px;
+  color: #ffffff;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.store_img3 i:nth-child(3){ /* 선물박스 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.3);
+  font-size: 50px;
+  color: #fff;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.store_img3 i:nth-child(4){ /* 쿠폰모양 */
+  position: absolute;
+  top: 50%;
+  left: 73%;
+  transform: translate(-50%, -50%) scale(0.3);
+  font-size: 50px;
+  color: #ffffff;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.store_img3:hover i{
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.store_img3 i:hover{
+  transform: translate(-50%, -50%) scale(1.3);
+  color: #ff5040;
+}
+
+/* 세번째 스토어 오버시 효과 끝 */
+
+/* 네번째 스토어 오버시 효과들 */
+
+.store_img4{
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.store_img4:before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+}
+.store_img4:hover.store_img4:before {opacity: 1;}
+
+.store_img4 i:nth-child(2){ /* 장바구니 */
+  position: absolute;
+  top: 50%;
+  left: 27%;
+  transform: translate(-50%, -50%) scale(0.3);
+  font-size: 50px;
+  color: #ffffff;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.store_img4 i:nth-child(3){ /* 선물박스 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.3);
+  font-size: 50px;
+  color: #fff;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.store_img4 i:nth-child(4){ /* 쿠폰모양 */
+  position: absolute;
+  top: 50%;
+  left: 73%;
+  transform: translate(-50%, -50%) scale(0.3);
+  font-size: 50px;
+  color: #ffffff;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.store_img4:hover i{
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.store_img4 i:hover{
+  transform: translate(-50%, -50%) scale(1.3);
+  color: #ff5040;
+}
+
+/* 네번째 스토어 오버시 효과 끝 */
+
+.store_img{
+  position: relative;
+}
+
+.store_img {
+  width: 1200px;
+  height: 450px;
+  margin: auto;
+}
+.store_img ul {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.store_img h4{
+  color: darkred;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+/* /////////// 이벤트 */
+
+#event{
+  height: 700px;
+  background-color: aliceblue;
+  padding-top: 50px;
+  
+}
+.event_img{
+  width: 1200px;
+  height: 500px;
+  margin: 50px auto 0;
+}
+.event_img ul{
+  width: inherit;
+  display: flex;
+  justify-content: center;
+}
+
+.event_img ul li{
+  margin: 10px;
+}
+
+.btitle{
+  /* border: 1px solid red; */
+  width: 100%;
+  margin: auto;
+}
+
+.btitle h5{
+  color: darkred;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  margin: 15px 0;
+}
+
+.btitle p{text-align: left;}
+.btitle a{
+  display: block;
+  margin-top: 50px;
+  text-align: left;
+  text-decoration: underline;
+  color: #000;
+}
+
+/* 보너스(혜택)------------------------------------------- */
+#bonus{
+  width: 100%;
+  height: 700px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  background-color: #f4fff6;
+}
+
+.bonus_img{
+  width: 1200px;
+  margin: auto;
+}
+
+.bonus1{
+}
+
+.bonus_{
+  margin: 20px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* 혜택 슬라이드------- */
+
+input[name=bonus_tabmenu]{display: none;}
+.bonus_tab{
+  /* border: 1px solid red; */
+  width: 925px;
+  height: 390px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bonus_items{
+  width: 2775px;
+  height: 390px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  display: flex;
+  transition: 0.5s;
+}
+
+.bonus_items div{
+    /* border: 1px solid blue; */
+    width: 925px;
+    height: 390px;
+    position: relative;   
+}
+
+.btn2{
+  display: flex;
+  position: absolute;
+  margin-left: 375px;
+  margin-bottom: -320px;
+}
+
+.btn2 label{
+  display: inline-block;
+  width: 50px;
+  height: 10px;
+  margin: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.btn2 label:hover{
+  transform: scale(1.1);
+}
+
+input[id=bonus_tab1]:checked ~ .slide1,
+input[id=bonus_tab2]:checked ~ .slide2,
+input[id=bonus_tab3]:checked ~ .slide3 {
+  left: 0px;
+  opacity: 1;
+}
+input[id=bonus_tab1]:checked ~ .btn2 label[for=bonus_tab1],
+input[id=bonus_tab2]:checked ~ .btn2 label[for=bonus_tab2],
+input[id=bonus_tab3]:checked ~ .btn2 label[for=bonus_tab3] {
+  background-color: darkred;
+  opacity: 0.8;
+}
+
+input[id=bonus_tab1]:checked ~ .bonus_tab .bonus_items{left: 0;}
+input[id=bonus_tab2]:checked ~ .bonus_tab .bonus_items{left: -925px;}
+input[id=bonus_tab3]:checked ~ .bonus_tab .bonus_items{left: -1850px;}
+
+
+
+/* //////////Button */
+.btn{
+  display: block;
+  width: 200px;
+  height: 45px;
+  line-height: 45px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 30px;
+  text-transform: capitalize;
+  margin: 20px auto;
+  transition: 0.3s;
+  font-weight: bold;
+  color: #333;
+}
+.btn:hover{
+  border-color: darkred;
+  color: darkred;
+  transform: scale(1.1);
+}
+
+/* Footer_____________________________________________ */
+footer{
+  width: 100%;
+  height: 150px;
+  background-color: #ddd;
+  display: flex;
+  flex-direction: column; /* 두개일때 수직으로 배치 */
+  justify-content: center;
+  align-items: center;
+}
+address{
+  font-style: normal;
+  color: #000;
+}
+address strong{color: rgb(163, 11, 11);}
+
